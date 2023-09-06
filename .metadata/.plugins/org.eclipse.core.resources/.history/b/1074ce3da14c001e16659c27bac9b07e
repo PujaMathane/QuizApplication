@@ -8,7 +8,8 @@ import java.util.Scanner;
 
 public class StudentLoginImpl implements StudentLogin{
 	static int id=0;
-	
+	//String userName=null;
+	//String passWord=null;
 	@Override
 	public void getLoginDetails() {
 		Scanner scanner=new Scanner(System.in);
@@ -24,9 +25,11 @@ public class StudentLoginImpl implements StudentLogin{
 		PreparedStatement ps=null;
 		ResultSet rs=null;
 		ConnectionMain connectionMain=new ConnectionMain();
-		
+		//String userName = null;
+		//String passWord = null;
 			try {
-			
+			//String userName=null;
+			//String passWord=null;
 			con=connectionMain.getConnection();
 			ps=con.prepareStatement("select * from studentregistration");
 			rs=ps.executeQuery();
@@ -51,6 +54,7 @@ public class StudentLoginImpl implements StudentLogin{
 			// if(username.equals(rs.getString(1))&&password.equals(rs.getString(2)))
 			
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		finally
